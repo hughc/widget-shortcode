@@ -1,10 +1,10 @@
 === Widget Shortcode ===
-Contributors: shazdeh
+Contributors: shazdeh, hughc
 Plugin Name: Widget Shortcode
 Tags: widget, shortcode, theme, admin
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 
 Adds a [widget] shortcode which enables you to output widgets anywhere you like.
 
@@ -28,6 +28,9 @@ Or override the default widget title in the shortcode:
 1. The plugin generates the shortcode for you
 
 == Changelog ==
+
+= 0.2.4 =
+* Workaround for Piklist-created widgets not registered by conventional means
 
 = 0.2.3 =
 * Fixed missing widget classes and ID from before_widget

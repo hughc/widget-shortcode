@@ -52,7 +52,8 @@ function do_widget( $args ) {
 	preg_match( '/(\d+)/', $id, $number );
 	$options = get_option( $wp_registered_widgets[$id]['callback'][0]->option_name );
 	$instance = $options[$number[0]];
-	$class = get_class( $wp_registered_widgets[$id]['callback'][0] );
+	$widget_instance = $wp_registered_widgets[$id]['callback'][0];
+	$class = isset($widget_instance['widget_name']) ? $widget_instance['widget_name'] : get_class($widget_instance);
 	$widgets_map = widget_shortcode_get_widgets_map();
 	$_original_widget_position = $widgets_map[$id];
 
